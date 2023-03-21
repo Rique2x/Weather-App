@@ -10,22 +10,47 @@
 <body>
     <script src="main.js"></script>
 
-    <header>
-        <div class="wrapper flex_box">
-            <form>
-                <div class="input">
-                    <label>
-                        Location
-                    </label>
-                    <input class="name" placeholder="Enter Location" type="text" id="location" required>
+    <div class="container">
+        <header>
+            <div class="formWrapper flex_box">
+                <form>
+                    <div class="input">
+                        <label>
+                            Location
+                        </label>
+                        <input class="name" placeholder="Enter Location" type="text" id="location" required>
+                        <span id="Error" class="error"></span>
+                    </div>
+                    <div class="button_wrapper">
+                        <button id="submit">
+                            submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </header>
+
+        <main class="weather">
+
+            <section class="weather__mainDetails">
+                <div class="weather__mainDetails__textSection">
+                    <h1 id="currentWeather">Broken Clouds</h1>
+                    <h2 id="place">Arandis</h2>
+                    <p id="currentDate">21 Mar 2023</p>
+                    <p id="currentTime">3:50 pm</p>
                 </div>
-                <div class="button_wrapper">
-                    <button id="submit">
-                        submit
-                    </button>
+                <div class="weather__mainDetails__temperature">
+                    <h1 id="temperature">20 C</h1>
                 </div>
-            </form>
-        </div>
-    </header>
+            </section>
+
+            <section class="weather__subDetails">
+
+            </section>
+            
+        </main>
+
+    </div>
+                
 </body>
 </html>
