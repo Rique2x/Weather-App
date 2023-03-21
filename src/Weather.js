@@ -1,3 +1,5 @@
+import displayWeather from "./view";
+
 const errorMsg = document.getElementById("Error");
 
 async function getWeather(place = "Arandis") {
@@ -8,14 +10,22 @@ async function getWeather(place = "Arandis") {
 	//console.log(resp);
 
 	    const respData = await resp.json();
-		console.log(respData.name);
+		
+		const locationName = respData.name;
+		// console.log(respData.name);
+
 
 		const weatherMainData = respData.main;
-		console.log(weatherMainData);
+		
+		// console.log(weatherMainData);
 
                 const weatherSubData = respData.weather[0];
-	            console.log(weatherSubData);
-        } catch {
+	            // console.log(weatherSubData);
+
+		displayWeather.showData(locationName, weatherMainData, weatherSubData);
+	} catch (err) {
+		console.log(err);
+		console.log("This is from catch: error");
 	            errorMsg.textContent = "Enter Valid City, State or Country!";
         }
 }
@@ -36,6 +46,7 @@ export default (function weather() {
 	function initialize() {
 		const submitBtn = document.getElementById("submit");
 		submitBtn.addEventListener("click", getLocation);
+		getWeather("New York");
 	}
 	return {
 		initialize,
