@@ -1,1 +1,1 @@
-!async function(o){const a=await fetch("https://api.openweathermap.org/data/2.5/weather?q=Jamshedpur&appid=c71a2bee0691fb692d156e4c950c6d61");console.log(a);const e=await a.json();console.log(e);const c=e.main;console.log(c)}();
+!async function(a){const o=await fetch("https://api.openweathermap.org/data/2.5/weather?q=Jamshedpur&units=metric&appid=e3cd04868ae1a93483419e83e5d735b7");console.log(o);const e=await o.json();console.log(e);const t=e.main;console.log(t)}();
