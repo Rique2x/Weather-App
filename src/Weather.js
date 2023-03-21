@@ -46,7 +46,7 @@ export default (function weather() {
 	function initialize() {
 		const submitBtn = document.getElementById("submit");
 		submitBtn.addEventListener("click", getLocation);
-		getWeather("New York");
+		getWeather("Arandis");
 	}
 	return {
 		initialize,
