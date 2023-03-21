@@ -109,4 +109,26 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+}
+
+.weather {
+  color: white;
+}
+
+.weather__mainDetails {
+  height: 100%;
+  width: 100%;
+}
+
+.weather__mainDetails__textSection {
+  margin-bottom: 1rem;
+}
+
+.weather__mainDetails h1 {
+  font-size: 2rem;
+}
+
+.weather__subDetails {
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
