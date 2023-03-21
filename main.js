@@ -1,1 +1,1 @@
-(()=>{"use strict";!async function(a){const e=await fetch("https://api.openweathermap.org/data/2.5/weather?q=Jamshedpur&units=metric&appid=e3cd04868ae1a93483419e83e5d735b7");console.log(e);const o=await e.json();console.log(o);const t=o.main;console.log(t)}()})();
+(()=>{"use strict";console.log("webpack")})();
