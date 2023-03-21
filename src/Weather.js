@@ -1,4 +1,4 @@
-async function getWeather(place) {
+async function getWeather(place = "Arandis") {
 	const resp = await fetch(
 		`https://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&appid=e3cd04868ae1a93483419e83e5d735b7`
 	);
@@ -14,4 +14,10 @@ async function getWeather(place) {
 	console.log(weatherSubData);
 }
 
-export default getWeather;
+// async function getLocation() {}
+
+export default (function weather() {
+	return {
+		getWeather,
+	};
+})();
