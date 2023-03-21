@@ -1,0 +1,9 @@
+.container {
+	margin-inline: auto;
+	max-width: 85vw;
+	min-height: 80vh;
+	margin: 5rem 5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
