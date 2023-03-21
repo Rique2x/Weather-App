@@ -1,23 +1,44 @@
+const errorMsg = document.getElementById("Error");
+
 async function getWeather(place = "Arandis") {
-	const resp = await fetch(
+	try {
+		const resp = await fetch(
 		`https://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&appid=e3cd04868ae1a93483419e83e5d735b7`
 	);
-	console.log(resp);
+	//console.log(resp);
 
-	const respData = await resp.json();
-	console.log(respData);
+	    const respData = await resp.json();
+		console.log(respData.name);
 
-	const weatherData = respData.main;
-	console.log(weatherData);
+		const weatherMainData = respData.main;
+		console.log(weatherMainData);
 
-    const weatherSubData = respData.weather[0];
-	console.log(weatherSubData);
+                const weatherSubData = respData.weather[0];
+	            console.log(weatherSubData);
+        } catch {
+	            errorMsg.textContent = "Enter Valid City, State or Country!";
+        }
 }
 
-// async function getLocation() {}
+async function getLocation(e) {
+	errorMsg.textContent = "";
+
+	const location = document.getElementById("location");
+	// console.log(location);
+	if (location.value !== "") {
+		e.preventDefault();
+		// console.log(location.value);
+		getWeather(location.value);
+	}
+}
 
 export default (function weather() {
+	function initialize() {
+		const submitBtn = document.getElementById("submit");
+		submitBtn.addEventListener("click", getLocation);
+	}
 	return {
+		initialize,
 		getWeather,
 	};
 })();
