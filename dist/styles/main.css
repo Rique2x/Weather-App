@@ -121,11 +121,25 @@ button:hover {
 }
 
 .weather__mainDetails__textSection {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.weather__mainDetails h1 {
+.weather__mainDetails__textSection h1 {
+  font-size: 3rem;
+}
+
+.weather__mainDetails__textSection h2 {
   font-size: 2rem;
+  color: #bbf7d0;
+}
+
+.weather__mainDetails__textSection p {
+  font-size: 1.2rem;
+}
+
+.weather__mainDetails__temperature h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
 }
 
 .weather__subDetails {
