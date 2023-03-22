@@ -1,11 +1,11 @@
 import { compareAsc, format } from "date-fns";
 //    <h1 id="currentWeather">Broken Clouds</h1>
-//                     <h2 id="place">Madina</h2>
-//                     <p id="currentDate">24 Feb 2023</p>
-//                     <p id="currentTime">2:20 pm</p>
+//                     <h2 id="place">Arandis</h2>
+//                     <p id="currentDate">21 Mar 2023</p>
+//                     <p id="currentTime">3:50 pm</p>
 //                 </div>
 //                 <div class="weather__mainDetails__temperature">
-//                     <h1 id="temperature">24 C</h1>
+//                     <h1 id="temperature">20 C</h1>
 const currentWeather = document.getElementById("currentWeather");
 const place = document.getElementById("place");
 // const weatherDesc = document.getElementById("weatherDesc");

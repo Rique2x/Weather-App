@@ -39,6 +39,7 @@ async function getLocation(e) {
 		e.preventDefault();
 		// console.log(location.value);
 		getWeather(location.value);
+		location.value = "";
 	}
 }
 
