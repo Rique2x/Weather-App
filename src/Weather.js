@@ -2,7 +2,7 @@ import displayWeather from "./view";
 
 const errorMsg = document.getElementById("Error");
 
-async function getWeather(place = "Arandis") {
+async function getWeather(place = "Windhoek") {
 	try {
 		const resp = await fetch(
 		`https://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&appid=e3cd04868ae1a93483419e83e5d735b7`
@@ -52,7 +52,7 @@ export default (function weather() {
 	function initialize() {
 		const submitBtn = document.getElementById("submit");
 		submitBtn.addEventListener("click", getLocation);
-		getWeather("Arandis");
+		getWeather("Windhoek");
 	}
 	return {
 		initialize,

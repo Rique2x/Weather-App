@@ -1,9 +1,8 @@
 import { format } from "date-fns";
-// main Data Selectors
 
+// main Data Selectors
 const currentWeather = document.getElementById("currentWeather");
 const place = document.getElementById("place");
-// const weatherDesc = document.getElementById("weatherDesc");
 const currentDate = document.getElementById("currentDate");
 const currentTime = document.getElementById("currentTime");
 const temperature = document.getElementById("temperature");
@@ -22,41 +21,41 @@ function displayCurrentWeather(subData) {
 }
 
 function displayTemp(data) {
+	const { temp } = data;
+	// * this formats the temperature in celsius symbol
 	const degrees = new Intl.NumberFormat("en-US", {
 		style: "unit",
 		unit: "celsius",
 	});
-	temperature.innerHTML = `${degrees.format(data.temp)}`;
+	temperature.innerHTML = `${degrees.format(temp)}`;
 }
 
 function displayDateTime() {
 	const formattedDate = format(new Date(), "MMM dd, yyyy");
 	currentDate.textContent = formattedDate;
-
 	const time = `${new Date().getHours()}:${new Date().getMinutes()}`;
 	currentTime.textContent = time;
 }
 
-function displaySubData(resp) {
+function displaySubData(main, wind) {
+	// * this formats the temperature in celsius symbol
 	const degrees = new Intl.NumberFormat("en-US", {
 		style: "unit",
 		unit: "celsius",
 	});
-	feel.textContent = `${degrees.format(resp.main.feels_like)}`;
-
-	humidity.textContent = `${resp.main.humidity}%`;
-
-	windSpeed.textContent = `${resp.wind.speed} km/h`;
+	feel.textContent = `${degrees.format(main.feels_like)}`;
+	humidity.textContent = `${main.humidity}%`;
+	windSpeed.textContent = `${wind.speed} km/h`;
 }
 
 const displayWeather = (() => {
-	function showData(resp, location, mainData, subData) {
-		//console.log({ resp, location, mainData, subData });
+	function showData(resp) {
+		const { name, main, weather, wind } = resp;
 
-
-		displayName(location);
-		displayCurrentWeather(subData);
-		displayTemp(mainData);
+		displayName(name);
+		displayCurrentWeather(weather[0]);
+		displayTemp(main);
+		displaySubData(main, wind);
 		displayDateTime();
 	}
 

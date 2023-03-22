@@ -1,3 +1,3 @@
 import Weather from "./Weather";
 
-Weather.render();
+Weather.initialize();
