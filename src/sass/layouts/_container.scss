@@ -6,4 +6,12 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
+	
+	@media (max-width: 576px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		max-width: 100vw;
+		margin-left: 1.5rem;
+		margin-right: 2rem;
+	}
 }
