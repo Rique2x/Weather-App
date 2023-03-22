@@ -1,17 +1,17 @@
-import { compareAsc, format } from "date-fns";
-//    <h1 id="currentWeather">Broken Clouds</h1>
-//                     <h2 id="place">Arandis</h2>
-//                     <p id="currentDate">21 Mar 2023</p>
-//                     <p id="currentTime">3:50 pm</p>
-//                 </div>
-//                 <div class="weather__mainDetails__temperature">
-//                     <h1 id="temperature">20 C</h1>
+import { format } from "date-fns";
+// main Data Selectors
+
 const currentWeather = document.getElementById("currentWeather");
 const place = document.getElementById("place");
 // const weatherDesc = document.getElementById("weatherDesc");
 const currentDate = document.getElementById("currentDate");
 const currentTime = document.getElementById("currentTime");
 const temperature = document.getElementById("temperature");
+
+// sub Data selectors
+const feel = document.getElementById("feelsLike");
+const humidity = document.getElementById("humidity");
+const windSpeed = document.getElementById("windSpeed");
 
 function displayName(name) {
 	place.textContent = name;
@@ -37,9 +37,22 @@ function displayDateTime() {
 	currentTime.textContent = time;
 }
 
+function displaySubData(resp) {
+	const degrees = new Intl.NumberFormat("en-US", {
+		style: "unit",
+		unit: "celsius",
+	});
+	feel.textContent = `${degrees.format(resp.main.feels_like)}`;
+
+	humidity.textContent = `${resp.main.humidity}%`;
+
+	windSpeed.textContent = `${resp.wind.speed} km/h`;
+}
+
 const displayWeather = (() => {
-	function showData(location, mainData, subData) {
-		console.log({ location, mainData, subData });
+	function showData(resp, location, mainData, subData) {
+		console.log({ resp, location, mainData, subData });
+
 
 		displayName(location);
 		displayCurrentWeather(subData);
