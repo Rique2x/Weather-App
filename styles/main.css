@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   background-color: #1e293b;
-  background: url(/dist/background-images/Download\ Beautiful\ Night\ Landscape\ With\ Mountain\ And\ Lake\ for\ free.jpeg);
+  background: url(/src/background-images/Pink\ peak\,\ Anton\ Dmitriev.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -21,7 +21,7 @@ body {
 @media (max-width: 370px) {
   body {
     min-height: 130vh;
-    background: url("/dist/background-images/Download Beautiful Night Landscape With Mountain And Lake for free.jpeg");
+    background: url("/src/background-images/Pink peak, Anton Dmitriev.jpeg");
     background-color: #1e293b;
     background-blend-mode: difference;
     background-repeat: no-repeat;
