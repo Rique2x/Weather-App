@@ -51,7 +51,7 @@ function displaySubData(resp) {
 
 const displayWeather = (() => {
 	function showData(resp, location, mainData, subData) {
-		console.log({ resp, location, mainData, subData });
+		//console.log({ resp, location, mainData, subData });
 
 
 		displayName(location);
