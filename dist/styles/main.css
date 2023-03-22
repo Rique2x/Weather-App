@@ -156,6 +156,10 @@ button:hover {
   color: #bbf7d0;
 }
 
+.weatherSub h3__textSection .dateTime {
+  margin-top: 0.5rem;
+}
+
 .weatherSub h3__textSection p {
   font-size: 1.2rem;
 }
