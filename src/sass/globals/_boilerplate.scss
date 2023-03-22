@@ -15,4 +15,14 @@ body {
 	background-position: center;
 	overflow: hidden;
 	font-family: 'Roboto Condensed', sans-serif;
+
+	@media (max-width: 370px) {
+		min-height: 130vh;
+		background: url("/dist/background-images/Download\ Beautiful\ Night\ Landscape\ With\ Mountain\ And\ Lake\ for\ free.jpeg");
+		background-color: #1e293b;
+		background-blend-mode: difference;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-size: center;
+	}
 }
