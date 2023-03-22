@@ -1,11 +1,14 @@
 .weatherMain {
 	color: white;
 
+	@media (max-width: 576px) {
+		max-width: 90vw;
+	}
+
+
 	&__Details {
 		height: 100%;
 		width: 100%;
-		// grid-row: 1/3;
-		// grid-column: 2/3;
 
 		&__textSection {
 			margin-bottom: 2rem;
@@ -13,7 +16,7 @@
 				color: #bae6fd;
 				font-size: 3rem;
 				@media (max-width: 576px) {
-					font-size: 2.2rem;
+					font-size: 0.5rem;
 				}
 			}
 			h2 {
@@ -54,7 +57,9 @@
 	align-items: end;
 	gap: 2rem;
 	@media (max-width: 576px) {
-		gap: 1rem;
+		margin-top: 0;
+		gap: 0.5rem;
+		max-width: 90vw;
 	}
 	p {
 		font-size: 1.1rem;
