@@ -30,27 +30,40 @@
             </div>
         </header>
 
-        <main class="weather">
+        
+        <section class="weatherMain">
 
-            <section class="weather__mainDetails">
-                <div class="weather__mainDetails__textSection">
+            <div class="weatherMain__Details">
+                <div class="weatherMain__Details__textSection">
                     <h1 id="currentWeather">Broken Clouds</h1>
                     <h2 id="place">Arandis</h2>
                     <p id="currentDate">21 Mar 2023</p>
                     <p id="currentTime">3:50 pm</p>
                 </div>
-                <div class="weather__mainDetails__temperature">
+                 <div class="weatherMain__Details__temperature">
                     <h1 id="temperature">20 C</h1>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="weather__subDetails">
-
-            </section>
-            
-        </main>
-
-    </div>
-                
+        <section class="weatherSub">
+            <div>
+                <p>Feels Like</p>
+                <h3 id="feelsLike"></h3>
+            </div>
+            <div>
+                <p>Humidity</p>
+                <h3 id="humidity"></h3>
+            </div>
+            <!-- <div>
+                <p>Pressure</p>
+                <h3 class="pressure"></h3>
+            </div> -->
+            <div>
+                <p>Wind Speed</p>
+                <h3 id="windSpeed"></h3>
+            </div>
+        </section>
+    </div>  
 </body>
 </html>
