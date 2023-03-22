@@ -9,21 +9,26 @@ async function getWeather(place = "Arandis") {
 	);
 	//console.log(resp);
 
-	    const respData = await resp.json();
+	        const respData = await resp.json();
 		
-		const locationName = respData.name;
-		// console.log(respData.name);
+		    const locationName = respData.name;
+		// console.log(respData.wind);
 
 
-		const weatherMainData = respData.main;
+		    const weatherMainData = respData.main;
 		
-		// console.log(weatherMainData);
+		    // console.log(weatherMainData);
 
-                const weatherSubData = respData.weather[0];
+            const weatherSubData = respData.weather[0];
 	            // console.log(weatherSubData);
 
-		displayWeather.showData(locationName, weatherMainData, weatherSubData);
-	} catch (err) {
+			displayWeather.showData(
+				respData,
+				locationName,
+				weatherMainData,
+				weatherSubData
+				);
+	}   catch (err) {
 		console.log(err);
 		console.log("This is from catch: error");
 	            errorMsg.textContent = "Enter Valid City, State or Country!";
