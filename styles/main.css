@@ -18,6 +18,17 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+@media (max-width: 370px) {
+  body {
+    min-height: 130vh;
+    background: url("/dist/background-images/Download Beautiful Night Landscape With Mountain And Lake for free.jpeg");
+    background-color: #1e293b;
+    background-blend-mode: difference;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: center;
+  }
+}
 header {
   grid-row: 2/3;
   grid-column: 1/2;
@@ -143,11 +154,12 @@ button:hover {
 .weatherMain__Details__textSection h1 {
   color: #bae6fd;
   font-size: 3rem;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 576px) {
   .weatherMain__Details__textSection h1 {
-    font-size: 0.5rem;
+    font-size: 2.5rem;
   }
 }
 .weatherMain__Details__textSection h2 {
@@ -166,6 +178,7 @@ button:hover {
 
 .weatherMain__Details__textSection p {
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 @media (max-width: 576px) {
@@ -175,7 +188,7 @@ button:hover {
 }
 .weatherMain__Details__temperature h1 {
   font-size: 3.5rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 @media (max-width: 576px) {
