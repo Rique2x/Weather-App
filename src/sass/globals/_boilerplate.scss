@@ -9,7 +9,7 @@ body {
 	min-height: 100vh;
 	min-width: 100vw;
 	background-color: #1e293b;
-	background: url("https://github.com/Rique2x/Weather-App/blob/main/src/background-images/Pink%20peak,%20Anton%20Dmitriev.jpeg?raw=true");
+	background-image: url('/dist/styles/Dmitriev.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -18,7 +18,7 @@ body {
 
 	@media (max-width: 370px) {
 		min-height: 130vh;
-		background: url("https://github.com/Rique2x/Weather-App/blob/main/src/background-images/Pink%20peak,%20Anton%20Dmitriev.jpeg?raw=true");
+		background: url("/dist/styles/Dmitriev.jpeg");
 		background-color: #1e293b;
 		background-blend-mode: difference;
 		background-repeat: no-repeat;
