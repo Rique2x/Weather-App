@@ -4,7 +4,6 @@ import { format } from "date-fns";
 const currentWeather = document.getElementById("currentWeather");
 const place = document.getElementById("place");
 const currentDate = document.getElementById("currentDate");
-const currentTime = document.getElementById("currentTime");
 const temperature = document.getElementById("temperature");
 
 // sub Data selectors
@@ -34,8 +33,38 @@ function displayDateTime() {
 	const formattedDate = format(new Date(), "MMM dd, yyyy");
 	currentDate.textContent = formattedDate;
 	const time = `${new Date().getHours()}:${new Date().getMinutes()}`;
-	currentTime.textContent = time;
+	
 }
+
+function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
 
 function displaySubData(main, wind) {
 	// * this formats the temperature in celsius symbol
